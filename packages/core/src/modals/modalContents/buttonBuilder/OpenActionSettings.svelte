@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { MetaBind } from 'packages/core/src';
-	import { ButtonStyleType, type OpenButtonAction } from 'packages/core/src/config/ButtonConfig';
+	import { ButtonStyleType, ButtonPaneType, type OpenButtonAction } from 'packages/core/src/config/ButtonConfig';
 
 	import Button from 'packages/core/src/utils/components/Button.svelte';
 	import Icon from 'packages/core/src/utils/components/Icon.svelte';
@@ -29,10 +29,10 @@
 	>
 </SettingComponent>
 
-<SettingComponent name="New tab" description="Whether to open the link in a new tab.">
-	<Toggle bind:checked={action.newTab}></Toggle>
-</SettingComponent>
-
-<SettingComponent name="New window" description="Whether to open the link in a new window.">
-	<Toggle bind:checked={action.newWindow}></Toggle>
+<SettingComponent name="Open in" description="How the link should open.">
+	<select bind:value={action.panetype}>
+		<option value={ButtonPaneType.NewTab}>New Tab</option>
+		<option value={ButtonPaneType.NewSplit}>New Split</option>
+		<option value={ButtonPaneType.NewWindow}>New Window</option>
+	</select>
 </SettingComponent>
