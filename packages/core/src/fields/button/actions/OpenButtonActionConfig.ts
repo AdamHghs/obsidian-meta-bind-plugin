@@ -4,7 +4,7 @@ import {
 	type ButtonConfig,
 	type ButtonContext,
 	type OpenButtonAction,
-	ButtonPaneType
+	ButtonPaneType,
 } from 'packages/core/src/config/ButtonConfig';
 import { ButtonActionType } from 'packages/core/src/config/ButtonConfig';
 import { AbstractButtonActionConfig } from 'packages/core/src/fields/button/AbstractButtonActionConfig';

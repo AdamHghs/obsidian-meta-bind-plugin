@@ -37,9 +37,9 @@ export enum ButtonActionType {
 }
 
 export enum ButtonPaneType {
-	NewTab = "tab",
-	NewSplit = "split",
-	NewWindow = "window"
+	NewTab = 'tab',
+	NewSplit = 'split',
+	NewWindow = 'window',
 }
 
 export interface CommandButtonAction {
@@ -241,11 +241,11 @@ export class ButtonClickContext {
 	}
 
 	openInNewWindow(): boolean {
-		return this.type === ButtonClickType.LEFT || this.ctrlKey || this.altKey || this.shiftKey;
+		return this.type === ButtonClickType.LEFT && this.ctrlKey && this.altKey && this.shiftKey;
 	}
 
 	openInNewSplit(): boolean {
-		return this.type === ButtonClickType.MIDDLE || this.ctrlKey || this.altKey
+		return this.type === ButtonClickType.MIDDLE && this.ctrlKey && this.altKey;
 	}
 }
 

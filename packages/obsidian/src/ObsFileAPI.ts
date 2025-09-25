@@ -74,7 +74,7 @@ export class ObsFileAPI extends FileAPI<ObsComponents> {
 	}
 
 	public async open(filePath: string, callingFilePath: string, PaneType: ButtonPaneType): Promise<void> {
-			void this.app.workspace.openLinkText(filePath, callingFilePath, PaneType);
+		void this.app.workspace.openLinkText(filePath, callingFilePath, PaneType);
 	}
 
 	public async openInSourceMode(file: TFile, newTab: boolean): Promise<void> {

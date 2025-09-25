@@ -58,7 +58,7 @@ export abstract class FileAPI<Components extends MB_Comps> {
 	 *
 	 * @param filePath
 	 * @param callingFilePath
-	 * @param PaneType 
+	 * @param PaneType
 	 */
 	public abstract open(filePath: string, callingFilePath: string, PaneType: ButtonPaneType | boolean): Promise<void>;
 
